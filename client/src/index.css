@@ -1,0 +1,125 @@
+/* src/index.css */
+/* Import Tailwind's base, components, and utilities */
+/* This gives us access to all of Tailwind's utility classes */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Global base styles that apply to the entire application */
+@layer base {
+  /* Set up CSS custom properties for our design system colors */
+  /* These variables are defined in our index.html and allow for consistent theming */
+  :root {
+    /* These CSS custom properties provide a consistent color palette */
+    /* The HSL values make it easy to create variations and maintain accessibility */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  /* Dark mode color scheme for modern user experience */
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+
+  /* Reset and base typography styles */
+  html {
+    /* Inter font provides excellent readability and professional appearance */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    /* Enable smooth scrolling for better user experience */
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Remove default browser margins and padding */
+    margin: 0;
+    padding: 0;
+    /* Apply our design system background and text colors */
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    /* Improve font rendering across different browsers */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Set minimum height to ensure full viewport coverage */
+    min-height: 100vh;
+  }
+
+  /* Typography hierarchy for consistent text styling */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    color: hsl(var(--foreground));
+  }
+
+  /* Ensure all interactive elements have proper focus states for accessibility */
+  button, a, input, select, textarea {
+    &:focus-visible {
+      outline: 2px solid hsl(var(--ring));
+      outline-offset: 2px;
+    }
+  }
+}
+
+/* Custom component styles that extend Tailwind's utility classes */
+@layer components {
+  /* Loading spinner animation for user feedback during async operations */
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Glassmorphism effect for modern card designs */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Smooth transitions for interactive elements */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
