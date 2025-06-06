@@ -4,6 +4,14 @@
 
 A comprehensive full-stack application for managing engineering team assignments, tracking capacity allocation, and optimizing resource utilization across projects.
 
+## 🌐 Live Demo
+
+**Try the application now:**
+- **Frontend Application**: [https://erm-v2.vercel.app/login](https://erm-v2.vercel.app/login)
+- **Backend API**: [https://erm-server-v1.onrender.com](https://erm-server-v1.onrender.com)
+
+*Use the demo credentials below to explore the full functionality*
+
 ## 🚀 Features
 
 ### 👥 **Team Management**
@@ -54,62 +62,6 @@ A comprehensive full-stack application for managing engineering team assignments
 - **Prettier** - Code formatting
 - **Vercel/Render** - Cloud deployment platforms
 
-## 🤖 AI-Powered Development Journey
-
-This project demonstrates the power of AI-assisted development in modern software engineering. Here's how AI transformed my learning experience:
-
-### **Learning TypeScript with AI**
-```typescript
-// Before AI: Struggling with complex type definitions
-interface User {
-  id: string;
-  name: string;
-  // ... basic types only
-}
-
-// After AI guidance: Advanced TypeScript patterns
-interface User extends BaseEntity {
-  _id: string;
-  role: "engineer" | "manager";
-  skills?: string[];
-  seniority?: "junior" | "mid" | "senior";
-  maxCapacity: number;
-  currentAllocation?: number;
-}
-
-// AI taught me discriminated unions, optional chaining, and utility types
-type AuthAction = 
-  | { type: "LOGIN_START" }
-  | { type: "LOGIN_SUCCESS"; payload: User }
-  | { type: "LOGIN_FAILURE"; payload: string };
-```
-
-### **Mastering Tailwind CSS**
-AI helped me understand Tailwind's utility-first philosophy and responsive design patterns:
-
-```css
-/* AI-guided responsive design */
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-  <Card className="hover:shadow-md transition-smooth">
-    {/* AI taught me composition over traditional CSS */}
-  </Card>
-</div>
-```
-
-### **Problem-Solving & Architecture**
-AI guided me through complex architectural decisions:
-
-1. **State Management**: Learning React Context vs external libraries
-2. **Component Composition**: Building reusable, accessible UI components
-3. **API Design**: RESTful principles and error handling patterns
-4. **Database Schema**: Relationship modeling and performance optimization
-
-### **AI Tools Used**
-- **Claude (Anthropic)** - Architecture guidance and code review
-- **GitHub Copilot** - Code completion and pattern suggestions
-- **Cursor IDE** - AI-powered development environment
-- **ChatGPT** - Problem-solving and debugging assistance
-
 ## 📁 Project Structure
 
 ```
@@ -148,7 +100,7 @@ engineering-resource-management/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/engineering-resource-management.git
+git clone https://github.com/piyushgyl01/erm-fullstack
 cd engineering-resource-management
 ```
 
@@ -229,64 +181,6 @@ DELETE /api/assignments/:id           # Delete assignment (Manager only)
 GET /api/analytics/utilization        # Team utilization data (Manager only)
 ```
 
-## 🌐 Live Demo
-
-- **Frontend**: [https://your-app.vercel.app](https://your-app.vercel.app)
-- **Backend API**: [https://your-api.render.com](https://your-api.render.com)
-
-## 🎯 Key Learning Outcomes
-
-### **TypeScript Mastery**
-- **Type Safety**: Eliminated runtime errors through compile-time checking
-- **Interface Design**: Created maintainable, self-documenting APIs
-- **Generic Programming**: Built reusable components with type constraints
-- **Advanced Patterns**: Discriminated unions, utility types, and conditional types
-
-### **Modern React Patterns**
-- **Component Composition**: Built flexible, reusable UI components
-- **State Management**: Implemented scalable state with Context + useReducer
-- **Performance Optimization**: Used React.memo, useMemo, and lazy loading
-- **Form Handling**: Integrated React Hook Form with Zod validation
-
-### **Professional Development Practices**
-- **Code Organization**: Structured large-scale applications
-- **Error Handling**: Implemented comprehensive error boundaries
-- **Testing Strategy**: Wrote maintainable, testable code
-- **Documentation**: Created self-documenting code with TypeScript
-
-## 🔮 Future Enhancements
-
-- [ ] **Real-time Updates**: WebSocket integration for live capacity changes
-- [ ] **Calendar Integration**: Google Calendar sync for assignment scheduling  
-- [ ] **Advanced Analytics**: Machine learning for resource optimization
-- [ ] **Mobile App**: React Native companion application
-- [ ] **Notification System**: Email/Slack alerts for capacity issues
-- [ ] **Time Tracking**: Integration with time tracking tools
-- [ ] **Reporting**: PDF export for management reports
-
-## 🤝 Contributing
-
-This project welcomes contributions! Here's how you can help:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Make your changes**: Follow the existing code style and patterns
-4. **Add tests**: Ensure new features are properly tested
-5. **Commit changes**: `git commit -m 'Add amazing feature'`
-6. **Push to branch**: `git push origin feature/amazing-feature`
-7. **Open a Pull Request**: Describe your changes and their benefits
-
-### **Development Guidelines**
-- Use TypeScript for all new code
-- Follow the existing component patterns
-- Add proper error handling
-- Update documentation for new features
-- Test thoroughly before submitting
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **AI Development Tools**: Claude, GitHub Copilot, Cursor IDE
@@ -298,19 +192,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 💡 Lessons Learned: AI as a Learning Accelerator
 
-This project represents a transformation in how I approach software development. AI didn't replace my thinking—it amplified it. Here are the key insights:
+This project represents a transformation in how I approach software development. AI didn't replace my thinking—it amplified it and accelerated my learning journey. Here are the key insights:
 
-### **AI Enhanced My Problem-Solving**
-- **Pattern Recognition**: AI helped me identify common architectural patterns
-- **Best Practices**: Learned industry standards through AI guidance
-- **Code Quality**: Improved through AI-powered code reviews
-- **Documentation**: AI helped me write clearer, more comprehensive docs
+### **AI Enhanced My Development Process**
+- **Boilerplate Generation**: AI helped rapidly scaffold components, API routes, and database schemas
+- **Pattern Recognition**: AI helped me identify common architectural patterns and industry best practices
+- **Learning Acceleration**: Complex concepts became accessible through AI-guided explanations and examples
+- **Code Quality**: Improved through AI-powered code reviews and optimization suggestions
+- **Documentation**: AI assisted in writing clearer, more comprehensive documentation
 
-### **The Future of Development**
-AI-assisted development isn't about replacing developers—it's about making them more effective. This project demonstrates how AI can:
-- Accelerate learning curves for new technologies
-- Improve code quality through intelligent suggestions
-- Enable rapid prototyping and iteration
-- Facilitate better architectural decisions
+### **AI-Assisted Learning Benefits**
+- **Faster Onboarding**: Quickly understood new libraries and frameworks (React 19, ShadCN UI)
+- **Best Practices**: Learned industry standards for authentication, state management, and API design
+- **Debugging Support**: AI helped identify and resolve complex issues faster
+- **Architecture Guidance**: Received recommendations for scalable, maintainable code structure
 
-**Built with ❤️ and 🤖 AI assistance**
+### **AI Tools Used**
+- **Claude (Anthropic)** - Architecture guidance, boilerplate generation, and comprehensive code reviews
+- **ChatGPT** - Problem-solving, debugging assistance, and learning complex concepts
+
+**Built with ❤️ and 🤖 AI assistance for accelerated learning and development**
